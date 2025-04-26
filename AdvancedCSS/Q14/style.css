@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border: 1px solid black;
+    position: relative;
+}
+
+.text {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: darkblue;
+}
+
+@media (max-width:600px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+}

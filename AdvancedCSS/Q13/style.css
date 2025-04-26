@@ -1,0 +1,13 @@
+.list-item li:first-child{
+    font-weight: bold;
+}
+.list-item li:first-child + li{
+    background-color: lightblue;
+}
+.list-item li:nth-child(3) ~ li{
+    font-style: italic;
+}
+.list-item li:hover{
+    color: darkred;
+    cursor: pointer;
+}
