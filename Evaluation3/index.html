@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Understanding How the Internet Works</h1>
+        <nav>
+            <ul>
+                <li><a href="#client-server">Client & Server</a></li>
+                <li><a href="#web-request">Web Request Journey</a></li>
+                <li><a href="#quick-facts">Quick Facts</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="client-server">
+        <h2 class="heading">Client and Server Communication</h2>
+        <p>The <b>client</b> is the user device(browser) requesting information. The <i>server</i> responds and to requests and delivers content.</p>
+        <p><u>Web development</u> focuses on creating both sides for a sealess experience!!</p>
+        <img src="The-Client-Server-Model.webp" alt="Client-Server Interaction Diagram" width="500">
+    </section>
+
+    <article id="web-request">
+        <h2>The Journey of a Web Request</h2>
+        <p>When you enter a URL in the browser, here's what happens: </p>
+        <ol>
+            <li>Browser looks up the domain name via <b>DNS</b>.</li>
+            <li>Browser sends a <i>HTTP</i> request to the server.</li>
+            <li>Server processes the request and sends back a response.</li>
+            <li>Browser renders the webpage for the user.</li>
+        </ol>
+
+        <h3>Key Internet Terms</h3>
+        <ul>
+            <li>HTTP</li>
+            <li>DNS</li>
+            <li>TCP/IP</li>
+            <li>Frontend</li>
+            <li>Backend</li>
+        </ul>
+
+        <h3>Comparison Tables</h3>
+        <table border="1">
+            <caption><b>Client vs Server</b></caption>
+            <br><br>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Client</th>
+                    <th>Server</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Role</td>
+                    <td>Request data</td>
+                    <td>Provides data</td>
+                </tr>
+                <tr>
+                    <td>Examples</td>
+                    <td>Web browser</td>
+                    <td>Web server</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <br><br>
+
+        <table border="1">
+        <caption><b>Static vs Dynamic Website</b></caption>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Static</th>
+                <th>Dynamic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Content</td>
+                <td>fixed</td>
+                <td>changes based on user interactions</td>
+            </tr>
+            <tr>
+                <td>Technology</td>
+                <td>HTML/CSS only</td>
+                <td>HTML + CSS + JavaScript/Backend</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Watch and Learn</h3>
+    <iframe width="500" height="300" src="https://www.youtube.com/watch?v=hJHvdBlSxug" title="Youtube video explaining how the web works."></iframe>
+
+    <h3>Major Internet Data Centres</h3>
+    <iframe src="https://datacenters.google/locations/" width="600" height="400" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </article>
+
+    <aside id="quick-facts">
+        <h2>Quick Facts and Tips</h2>
+        <ul>
+            <li><b>HTML</b> structures the web page</li>
+            <li><b>CSS</b> styles and design the web page</li>
+            <li>Use <u>responsive design</u></li>
+        </ul>
+        <p>Remember: 1<sub>st</sub> impression matter in UI, and great UX keeps user engaged!</p>
+    </aside>
+
+    <section id="quiz">
+        <h2> Interactive Quiz </h2>
+        <form action="#">
+            <p>what is a client?</p>
+            <label><input type="radio" name="cilent" value="server"> A server sending data</label><br>
+            <label><input type="radio" name="cilent" value="brower"> A browers requesting data</label><br>
+            <label><input type="radio" name="cilent" value="databasse"> A database storing data</label><br>
+
+            <p>Your Feedback: </p>
+            <input type="text" placeholder="Type your feedback here......">
+
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>Page designed by <b>Srishty Sengar❤️</b></p>
+    </footer>
+    
+</body>
+</html>
