@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Div Editor</title>
+  <style>
+    #myDiv {
+      padding: 20px;
+      background-color: lightgray;
+      color: black;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+    }
+
+    input, button {
+      margin: 10px 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Div Modifier</h2>
+
+  <label>Enter Color Name:</label>
+  <input type="text" id="colorInput" placeholder="e.g., red, blue, green">
+
+  <label>Enter Text:</label>
+  <input type="text" id="textInput" placeholder="New text for the div">
+
+  <button id="changeBgBtn">Change Background</button>
+  <button id="updateTextBtn">Update Text</button>
+
+  <div id="myDiv">This is the initial content of the div.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
