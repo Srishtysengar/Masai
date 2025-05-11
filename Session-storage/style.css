@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .container {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .dark-theme {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  .blue-theme {
+    background-color: #e0f0ff;
+    color: #003366;
+  }
+  
