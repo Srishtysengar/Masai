@@ -6,6 +6,10 @@ body {
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
   }
+  #heading{
+    display: flex;
+    justify-content: center;
+  }
   body.dark {
     background-color: #121212;
     color: #f4f4f4;
