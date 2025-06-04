@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  .details {
+    text-align: left;
+    margin-top: 20px;
+  }
+  footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background: #222;
+    color: #fff;
+  }
+  

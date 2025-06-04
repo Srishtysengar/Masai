@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars Encyclopedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="theme-toggle-container">
+    <button id="themeToggle">Toggle Dark/Light Theme</button>
+    <button id="randomCharacter">🎲 Random Character</button>
+  </div>
+  <div class="container">
+    <h1>🌌 Star Wars Encyclopedia</h1>
+    <div id="characterGrid" class="grid"></div>
+    <div class="pagination">
+      <button onclick="changePage(-1)">Previous</button>
+      <button onclick="changePage(1)">Next</button>
+    </div>
+  </div>
+  <footer id="clock"></footer>
+  <script src="script.js"></script>
+</body>
+</html>
