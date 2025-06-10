@@ -44,7 +44,7 @@ form.addEventListener("submit", function (e) {
 
 //Update table functionality
 function updateTable() {
-  table.innerHTML = "";
+  table.innerHTML = "";                   //reseting the ul to empty
 
   const searchText = search.value.toLowerCase();
 
