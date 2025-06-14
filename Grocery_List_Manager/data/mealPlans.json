@@ -1,0 +1,15 @@
+[
+    {
+      "weekStart": "2025-06-16",
+      "plan": [
+        { "day": "Monday",    "recipe": "Tomato Pasta" },
+        { "day": "Tuesday",   "recipe": "Chicken Salad" },
+        { "day": "Wednesday", "recipe": "Vegan Stir Fry" },
+        { "day": "Thursday",  "recipe": "Gluten-Free Pancakes" },
+        { "day": "Friday",    "recipe": "Tomato Pasta" },
+        { "day": "Saturday",  "recipe": "Vegan Stir Fry" },
+        { "day": "Sunday",    "recipe": "Chicken Salad" }
+      ]
+    }
+  ]
+  

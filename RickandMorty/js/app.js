@@ -42,6 +42,8 @@ document.getElementById('search').addEventListener('input', () => {
   debounceTimer = setTimeout(applyFilters, 300);
 });
 
+
+
 document.getElementById('status').onchange = applyFilters;
 document.getElementById('species').onchange = applyFilters;
 

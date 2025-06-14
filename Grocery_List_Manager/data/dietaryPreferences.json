@@ -1,0 +1,8 @@
+[
+    { "id": "vegetarian",   "label": "Vegetarian" },
+    { "id": "vegan",        "label": "Vegan" },
+    { "id": "gluten-free",  "label": "Gluten-Free" },
+    { "id": "low-carb",     "label": "Low-Carb" },
+    { "id": "dairy-free",   "label": "Dairy-Free" }
+  ]
+  

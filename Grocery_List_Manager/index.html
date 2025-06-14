@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grocery List Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1 class="Heading">🛒 Grocery List Manager</h1></header>
+  <main id="app">
+    
+  
+    <section id="grocerySection">
+        <h2>🛒 Shopping List</h2>
+        <div class="add-item">
+          <input type="text" id="itemInput" placeholder="Add grocery item…" />
+          <button id="addBtn">Add</button>
+        </div>
+        <ul id="groceryList"></ul>
+    </section>
+
+  
+    <section id="pantrySection">
+      <h2>🥫 Pantry</h2>
+      <form id="pantryForm">
+        <input id="pantryItem" placeholder="Item name" required/>
+        <input id="pantryQty" type="number" min="1" value="1" required/>
+        <input id="pantryExpiry" type="date"/>
+        <button type="submit">Add to Pantry</button>
+      </form>
+      <ul id="pantryList"></ul>
+    </section>
+
+    
+    <section id="recipesSection">
+        <h2>🍲 Recipe Suggestions</h2>
+        <button id="suggestRecipesBtn">Suggest Recipes</button>
+        <div id="recipeCards"></div>
+      </section>
+
+   
+    <section id="budgetSection">
+        <h2>💰 Budget</h2>
+        <input
+          id="budgetInput"
+          type="number"
+          min="0"
+          step="0.01"
+          placeholder="Set your budget"
+        />
+     
+        <div id="budgetTotal">Total: $0.00</div>
+      </section>
+
+   
+    <section id="preferencesSection">
+      <h2>⚖️ Dietary Preferences</h2>
+      
+      <div id="preferenceCheckboxes"></div>
+    </section>
+
+   
+    <section id="dealsSection">
+      <h2>🏷️ Deals & Coupons</h2>
+      <ul id="dealsList"></ul>
+    </section>
+
+   
+    <section id="mealPlannerSection">
+      <h2>📅 Meal Planner</h2>
+      <div id="weeklyCalendar"></div>
+      <button id="generateListFromPlan">Generate Shopping List</button>
+    </section>
+
+   
+    <section id="shoppingModeSection">
+      <h2>🛍️ Shopping Mode</h2>
+      <button id="enterShoppingMode">Enter Shopping Mode</button>
+      <div id="shoppingChecklist"></div>
+    </section>
+
+  
+    <section id="expirationSection">
+      <h2>⏰ Expiration Alerts</h2>
+      <ul id="expirationAlerts"></ul>
+    </section>
+
+    
+    <section id="nutritionSection">
+        <h2>🥗 Nutrition & Health</h2>
+        <div id="nutritionSummary">Loading…</div>
+      </section>
+
+   
+    <section id="historySection">
+        <h2>📈 Shopping History</h2>
+        <button id="recordPurchaseBtn">Record This Purchase</button>
+        <table id="historyTable">
+          <thead>
+            <tr><th>Date</th><th>Items</th><th>Total ($)</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+   
+    <section id="shareSection">
+      <h2>🤝 Share List</h2>
+      <button id="generateShareLink">Get Shareable Link</button>
+      <input id="shareLink" readonly/>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

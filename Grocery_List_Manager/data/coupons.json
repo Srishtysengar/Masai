@@ -1,0 +1,6 @@
+[
+    { "item": "Tomato",         "discount": 10, "description": "10% off fresh tomatoes" },
+    { "item": "Pasta",          "discount": 15, "description": "15% off all pasta" },
+    { "item": "Chicken Breast", "discount":  5, "description": "Buy one, get one 50% off" }
+  ]
+  
