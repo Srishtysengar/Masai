@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <h1>📚 Library Management</h1>
+
+  <h2>Add Book</h2>
+  <form id="bookForm">
+    <input id="title" placeholder="Title" required />
+    <input id="author" placeholder="Author" required />
+    <input id="genre" placeholder="Genre" required />
+    <input id="publishedYear" type="number" placeholder="Year" required />
+    <select id="available">
+      <option value="true">Available</option>
+      <option value="false">Not Available</option>
+    </select>
+    <button type="submit">Add Book</button>
+  </form>
+
+  <div class="controls">
+    <label>Genre:
+      <input type="text" id="filterGenre" placeholder="e.g. Science Fiction" />
+    </label>
+    <label>Author:
+      <input type="text" id="filterAuthor" placeholder="e.g. Orwell" />
+    </label>
+    <label>Availability:
+      <select id="filterAvailability">
+        <option value="">All</option>
+        <option value="true">Available</option>
+        <option value="false">Not Available</option>
+      </select>
+    </label>
+    <label>Sort by:
+      <select id="sortBooks">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="publishedYear">Year</option>
+      </select>
+    </label>
+    <label>Items per page:
+      <select id="itemsPerPage">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </label>
+    <button onclick="applyFilters()">Apply Filters</button>
+  </div>
+
+  <div id="bookList"></div>
+  <div class="pagination" id="pagination"></div>
+
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

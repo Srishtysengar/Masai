@@ -1,0 +1,36 @@
+body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f0f2f5;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 1em;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .controls {
+      margin-bottom: 20px;
+    }
+    .pagination {
+      display: flex;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .pagination button {
+      padding: 5px 10px;
+    }
