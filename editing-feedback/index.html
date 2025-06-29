@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Feedback Form</h2>
+
+  <form id="feedbackForm">
+    <input type="text" id="username" placeholder="Your Name" required />
+    <textarea id="message" placeholder="Your Feedback" rows="5" required></textarea>
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <div class="message" id="statusMessage"></div>
+
+  <hr/>
+
+  <h3>Submitted Feedback</h3>
+  <table id="feedbackTable">
+    <thead>
+      <tr><th>Name</th><th>Message</th><th>Actions</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="editSection" style="display:none;">
+    <h3>Edit Feedback</h3>
+    <form id="editForm">
+      <input type="text" id="editUsername" required />
+      <textarea id="editMessage" rows="5" required></textarea>
+      <button type="submit">Update Feedback</button>
+      <button type="button" id="cancelEdit">Cancel</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

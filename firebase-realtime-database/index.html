@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firebase Users</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    #error {
+      color: red;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>List of Users</h1>
+  <div id="error"></div>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const dbUrl = "https://realtimedatabase-74db0-default-rtdb.asia-southeast1.firebasedatabase.app/users.json";
+
+
+    async function fetchUsers() {
+      try {
+        const response = await fetch(dbUrl);
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        const tbody = document.querySelector('#userTable tbody');
+        tbody.innerHTML = '';
+
+        if (data) {
+          for (let key in data) {
+            const user = data[key];
+            const row = `<tr><td>${user.name}</td><td>${user.email}</td></tr>`;
+            tbody.insertAdjacentHTML('beforeend', row);
+          }
+        } else {
+          document.getElementById('error').textContent = "No users found.";
+        }
+
+      } catch (err) {
+        document.getElementById('error').textContent = "Failed to fetch users: " + err.message;
+      }
+    }
+
+    window.onload = fetchUsers;
+  </script>
+
+</body>
+</html>

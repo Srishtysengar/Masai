@@ -1,0 +1,103 @@
+<!-- Revisiting Fetch & Introduction to HTTP Methods -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #productContainer {
+        display: flex;
+        flex-wrap: wrap; /* allows items to move to next row */
+        justify-content: center; /* center items */
+        width: 100%; /* use full screen width */
+        padding: 10px;
+        gap: 10px;
+      }
+      #productContainer > div {
+        flex: 1 1 200px; 
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        max-width: 220px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn" onclick="fetchedData()">Fetch Products</button>
+    <select id="categoryFilter" onchange="filterByCategory()">
+      <option value="all">All</option>
+      <option value="audio">Audio</option>
+      <option value="gaming">Gaming</option>
+      <option value="mobile">Mobile</option>
+    </select>
+
+    <div id="productContainer"></div>
+  </body>
+</html>
+<script>
+  let products=[];
+  async function fetchedData() {
+    let button = document.getElementById("btn");
+    try {
+      button.disabled = true;
+
+      let response = await fetch("https://fakestoreapi.in/api/products");
+      let json = await response.json();
+      console.log(json);
+
+      products = Array.isArray(json) ? json : json.products;
+
+      let container = document.getElementById("productContainer");
+
+      products.forEach((product, index) => {
+        console.log(product);
+        let productBox = document.createElement("div");
+
+        productBox.innerHTML = `
+          <h4>${product.title}</h4>
+          <img src="${product.image}">
+          <p>${product.category}</p>
+          <p>${product.price}</p>
+          `;
+
+        container.appendChild(productBox);
+      });
+      filterByCategory();
+    } catch (error) {
+      alert("Falied to Fetch the Data");
+    } finally {
+      button.disabled = false;
+    }
+  }
+
+  async function filterByCategory() {
+    let selectedCategory=document.getElementById("categoryFilter").value;
+
+    let filteredProducts=
+       selectedCategory=="all"
+        ?products
+        :products.filter((product) => product.category==selectedCategory);
+        console.log(filteredProducts)
+  //   let container = document.getElementById("productContainer");
+  //   container.innerHTML = "";
+
+  //   filteredProducts.forEach((product) => {
+  //     let productBox = document.createElement("div");
+
+  //     productBox.innerHTML = `
+  //     <h4>${product.title}</h4>
+  //     <img src="${product.image}">
+  //     <p>${product.category}</p>
+  //     <p>${product.price}</p>
+  //   `;
+
+  //   container.appendChild(productBox);
+
+  // });
+}
+</script>
