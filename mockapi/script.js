@@ -7,19 +7,16 @@ async function fetchProducts() {
 
   productList.innerHTML = "";
   status.textContent = "Loading...";
-  status.className = "status";
 
-  let url = `GET https://mockapi.io/products?category=electronics&min_price=1000&max_price=5000&sort=asc
-
-`; 
+  let url = `https://68618ba48e74864084465a62.mockapi.io/user`;
 
   const params = [];
-  if (category) params.push(`category=${category}`);
-  if (min) params.push(`min_price=${min}`);
-  if (max) params.push(`max_price=${max}`);
-  params.push(`sort=asc`);
+  if (category) params.push(`category=${encodeURIComponent(category)}`);
+  if (min) params.push(`price_gte=${min}`);
+  if (max) params.push(`price_lte=${max}`);
+  params.push(`sortBy=price&order=asc`);
 
-  url += params.join("&");
+  if (params.length) url += "?" + params.join("&");
 
   try {
     const response = await fetch(url);
@@ -27,13 +24,12 @@ async function fetchProducts() {
 
     const data = await response.json();
 
-    if (data.length === 0) {
+    if (!Array.isArray(data) || data.length === 0) {
       status.textContent = "No products found.";
       return;
     }
 
     status.textContent = "";
-
     data.forEach(product => {
       const card = document.createElement("div");
       card.className = "product";
@@ -47,7 +43,8 @@ async function fetchProducts() {
 
   } catch (error) {
     status.textContent = "⚠️ Error fetching products.";
-    status.className = "status error";
+    status.className = "error";
     console.error(error);
   }
 }
+
