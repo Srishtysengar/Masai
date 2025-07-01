@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+#role-selection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#role-selection.hidden {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 4px;
+}
+.modal-content button {
+  margin: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+}
+
+
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+  background: #f1f1f1;
+}
+nav .tab-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+nav .tab-btn.active {
+  background: #ddd;
+}
+
+/* Banners */
+.banner {
+  text-align: center;
+  padding: 0.5rem;
+}
+#offline-banner {
+  background: #ffc107;
+  color: #856404;
+}
+#sync-banner {
+  background: #28a745;
+  color: #fff;
+}
+.hidden {
+  display: none;
+}
+
+/* Tabs */
+.tab-content {
+  display: none;
+  padding: 1rem;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Form */
+form > div {
+  margin-bottom: 0.75rem;
+}
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* Table & Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.controls select,
+.controls input {
+  padding: 0.5rem;
+}
+#feedbackTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+#feedbackTable th,
+#feedbackTable td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+#feedbackTable th.sortable {
+  cursor: pointer;
+}
+
+/* Conditional Row Colors */
+.green { background: #d4edda; }
+.yellow { background: #fff3cd; }
+.red { background: #f8d7da; }

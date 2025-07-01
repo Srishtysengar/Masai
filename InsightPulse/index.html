@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight Pulse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="role-selection">
+        <div class="modal-content">
+            <h2>Select Role</h2>
+            <button id="agentBtn">Agent</button>
+            <button id="leadBtn">Lead</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>Insight Pulse</h1>
+        <button id="logoutBtn">Switch Role</button>
+    </header>
+
+    <nav>
+        <button class="tabBtn" data-tab="form">Feedback Form</button>
+        <button class="tabBtn" data-tab="table">Feedback Table</button>
+        <button class="tabBtn" data-tab="analytics">Analytics</button>
+    </nav>
+
+    <div id="offline-banner" class="banner hidden">
+        You are offline. Feedback saved locally.
+    </div>
+    <div id="sync-banner" class="banner hidden">
+        All offline banner synced.
+    </div>
+
+    <section id="form" class="tab-content">
+        <form id="feedbackForm">
+            <div>
+                <label for="agentName">Agent Name</label>
+                <input type="text" id="agentName" required>
+            </div>
+            <div>
+                <label for="company">Client Company</label>
+                <input type="text" id="comapny" required/>
+            </div>
+            <div>
+                <label for="department">Department</label>
+                <select>
+                    <option value="SaaS">SaaS</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div>
+                <label for="score">Satisfaction Score(1-5)</label>
+                <input type="number" id="score" min="1" max="5" required/>
+            </div>
+            <div>
+                <label for="nps">NPS (Net Promoter Score: -100 to +100)</label>
+                <input type="number" id="nps" min="-100" max="+100"/>
+            </div>
+             <div>
+                <label for="comment">Comment</label>
+                <textarea id="comment" rows="3"></textarea>
+            </div>
+             <div>
+                <button type="submit">
+                    Submit Feedback
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <section id="table" class="tab-content">
+        <div class="controls">
+            <select id="filterDept">
+                <option value="">All Department</option>
+            </select>
+            <select id="filterAgent">
+                <option value="">All Agents</option>
+            </select>
+            <input 
+              type="text"
+              id="searchInput"
+              placeholder="Search by company or agent"
+            />
+            <button id="syncBtn">Sync Now</button>
+        </div>
+        <table id="feedbackTable">
+            <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>Company</th>
+                    <th>Dept</th>
+                    <th class="sortable" data-key="score">Score</th>
+                    <th class="sortable" data-key="nps">NPS</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    
+    <section id="analytics" class="tab-content">
+        <div id="analyticsContent"></div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-database.js"></script> 
+
+    <script src="js/firebaseConfig.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
