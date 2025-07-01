@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Pagination App</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .user-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+    .pagination {
+      margin-top: 20px;
+    }
+    .pagination button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .active-page {
+      background-color: #007BFF;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Paginated Users</h1>
+  <div id="userContainer"></div>
+  <div class="pagination" id="paginationContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

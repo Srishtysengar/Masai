@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+ <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .todo { padding: 10px; border-bottom: 1px solid #ccc; }
+    .pagination { margin-top: 20px; }
+    .pagination button {
+      margin: 2px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Paginated Todo List</h1>
+  <button id="btn" onclick="fetchTodos()">Fetch Products</button>
+  <div id="todoContainer"></div>
+  <div class="pagination" id="paginationContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
