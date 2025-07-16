@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Cart</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>QuickCart</h1>
+
+        <form id="itemForm">
+            <input type="text" id="itemName" placeholder="Item Name" required/>
+            <input type="number" id="itemQty" min="1" placeholder="Quantity" required/>
+            <input type="number" id="itemPrice" min="0.01" step="0.01" placeholder="Price" required/>
+            <select id="itemCategory" required>
+                <option value="">Select Category</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Chocolates">Chocolates</option>
+                <option value="Snacks">Snacks</option>
+            </select>
+            <button type="submit">submit</button>
+        </form>
+
+        <div class="filter">
+            <button data-filter="All">All</button>
+            <button data-filter="Dairy">Dairy</button>
+            <button data-filter="Chocolates">Chocolates</button>
+            <button data-filter="Snacks">Snacks</button>
+        </div>
+
+        <div id="totals"></div>
+        <div id="itemList"></div>
+        <div id="toast"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
