@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtCollab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ArtCollab</h1>
+    <nav>
+      <button id="loginBtn">Login</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <section id="authSection">
+    <h2>Login / Sign Up</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="signupBtn">Sign Up</button>
+    <button id="loginEmailBtn">Login</button>
+    <button id="googleLoginBtn">Login with Google</button>
+  </section>
+
+
+<section id="profileSection" style="display:none;">
+  <div class="profile-banner"></div>
+  <div class="profile-card">
+    <img id="profilePic" src="https://via.placeholder.com/120" alt="Profile Picture">
+    <div class="profile-info">
+      <h2 id="profileName">Your Name</h2>
+      <p id="profileEmail"></p>
+      <p id="profileBio">Your bio goes here...</p>
+      <button id="editProfileBtn">Edit Profile</button>
+    </div>
+  </div>
+
+ <div id="editProfileForm">
+  <input type="text" id="displayName" placeholder="Your Name">
+  <textarea id="bio" placeholder="Write your bio..."></textarea>
+  <button id="saveProfileBtn">Save Profile</button>
+</div>
+
+<h3>Upload Portfolio</h3>
+<input type="file" id="portfolioUpload" multiple>
+<div id="portfolioGallery"></div>
+
+</section>
+  <section id="artSection" style="display:none;">
+    <h2>Upload Artwork</h2>
+    <select id="categorySelect">
+      <option value="painting">Painting</option>
+      <option value="music">Music</option>
+      <option value="digital">Digital Art</option>
+    </select>
+    <input type="file" id="artUpload">
+    <button id="uploadArtBtn">Upload</button>
+    <div id="artGallery"></div>
+  </section>
+
+
+  <section id="projectSection" style="display:none;">
+    <h2>Collaborative Projects</h2>
+    <input type="text" id="projectTitle" placeholder="Project Title">
+    <textarea id="projectDesc" placeholder="Project Description"></textarea>
+    <button id="createProjectBtn">Create Project</button>
+    <ul id="projectList"></ul>
+  </section>
+
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
