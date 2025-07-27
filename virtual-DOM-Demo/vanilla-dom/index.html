@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla DOM vs React</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Vanilla DOM Demo</h1>
+  <button id="vanillaBtn">Change Title (Vanilla JS)</button>
+  <button id="reactBtn">Change Title (Simulated React)</button>
+  <p id="vanillaCount">Vanilla JS DOM Updates: 0</p>
+  <p id="reactCount">React Virtual DOM Updates: 0</p>
+
+  <script>
+    let vanillaCount = 0;
+    let reactCount = 0;
+
+    document.getElementById("vanillaBtn").addEventListener("click", () => {
+      document.getElementById("title").textContent =
+        "Title changed using Vanilla JS";
+      vanillaCount++;
+      document.getElementById("vanillaCount").textContent =
+        "Vanilla JS DOM Updates: " + vanillaCount;
+    });
+
+    document.getElementById("reactBtn").addEventListener("click", () => {
+      const titleEl = document.getElementById("title");
+      if (titleEl.textContent !== "Title changed using React (Simulated)") {
+        titleEl.textContent = "Title changed using React (Simulated)";
+        reactCount++;
+        document.getElementById("reactCount").textContent =
+          "React Virtual DOM Updates: " + reactCount;
+      }
+    });
+  </script>
+</body>
+</html>
