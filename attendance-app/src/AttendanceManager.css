@@ -1,0 +1,64 @@
+.attendance-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  margin-bottom: 15px;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.student-list li.present {
+  background-color: #4caf50; /* Green */
+}
+
+.student-list li.absent {
+  background-color: #f44336; /* Red */
+}
+
+.student-list button {
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.student-list button:hover {
+  background: #eee;
+}
+
+.present-count {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}

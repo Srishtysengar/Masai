@@ -1,0 +1,97 @@
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+.load-btn,
+.clear-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s;
+}
+
+.load-btn {
+  background-color: #0e66a1;
+}
+
+.load-btn:hover {
+  background-color: #0e66a1;
+}
+
+.clear-btn {
+  background-color: #ff4d4d;
+}
+
+.clear-btn:hover {
+  background-color: #e04343;
+}
+
+.loading {
+  color: #555;
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.no-data {
+  color: #777;
+  font-style: italic;
+}
+
+/* Product Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-weight: bold;
+  color: #4caf50;
+}
