@@ -2,12 +2,12 @@ import {useParams} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import axios from'axios';
 
-const RecipeDetail=({recipe})=>{
+const RecipeDetail=()=>{
     const {id} =useParams();
     const [recipe,setRecipe] = useState(null);
 
-     usseEffect(()=>{
-        axios.get("https://dummyjson.com/recipes/${id")
+     useEffect(()=>{
+        axios.get(`https://dummyjson.com/recipes/${id}`)
         .then(res=>setRecipe(res.data));
     },[id]);
 
@@ -22,3 +22,5 @@ const RecipeDetail=({recipe})=>{
             </div>
     );
 };
+
+export default RecipeDetail;

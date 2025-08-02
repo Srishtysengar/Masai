@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 
 const RecipeCard=({recipe})=>{
     const [isFavorite,setIsFavorite] = useState(false);
-    const navigate = usenavigate();
+    const navigate = useNavigate();
 
     return(
         <div className="card" onClick={()=> navigate(`/recipe/${recipe.id}`)}>

@@ -2,17 +2,17 @@ import { createContext, useState, useContext} from 'react';
 
 const ThemeContext = createContext();
 
-export const ThemeProvider =({children})=>{
-    const[theme,setTheme]=useState("light");
+export const ThemeProvider =({ children })=>{
+    const[theme, setTheme]=useState("light");
 
     const toggleTheme=()=>
-        setTheme((prev)=>(prev==="light"?"dark":"light"));
+        setTheme((prev)=>(prev === "light" ? "dark" : "light"));
 
     return(
-        <ThemeContext.provider value={{theme,toggleTheme}}>
+        <ThemeContext.Provider value={{theme,toggleTheme}}>
             <div className={`app ${theme}`}>{children}</div>
-        </ThemeContext.provider> 
-    )
-}
+        </ThemeContext.Provider> 
+    );
+};
 
 export const useTheme=()=>useContext(ThemeContext);
