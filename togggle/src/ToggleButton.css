@@ -1,0 +1,30 @@
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.on {
+  background-color: #d4fcd4;
+  color: green;
+}
+
+.off {
+  background-color: #ffd6d6;
+  color: red;
+}
