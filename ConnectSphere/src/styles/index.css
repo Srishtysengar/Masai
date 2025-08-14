@@ -1,0 +1,6 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; background: #fafafa; color: #111; }
+button { padding: 8px 12px; cursor: pointer; }
+a { color: inherit; }
