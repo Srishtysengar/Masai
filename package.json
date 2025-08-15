@@ -3,6 +3,7 @@
     "@chakra-ui/react": "^3.24.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@redux-devtools/extension": "^3.3.0",
     "framer-motion": "^12.23.12",
     "react-redux": "^9.2.0",
     "redux": "^5.0.1"
