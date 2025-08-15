@@ -1,0 +1,13 @@
+body { font-family: system-ui, sans-serif; margin: 0; }
+.page { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+header { display: flex; align-items: center; justify-content: space-between; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; }
+.tasks { list-style: none; padding: 0; display: grid; gap: 8px; margin-top: 12px; }
+.task { display: flex; align-items: center; justify-content: space-between; border: 1px solid #eee; padding: 10px; border-radius: 8px; }
+.task.done { opacity: 0.7; text-decoration: line-through; }
+.task.overdue { border-color: #ff8c8c; background: #fff3f3; }
+.pagination { display:flex; gap:8px; align-items:center; justify-content:center; margin-top: 12px; }
+.auth { max-width: 360px; margin: 64px auto; display: grid; gap: 12px; }
+input, textarea, select, button { padding: 8px; }
