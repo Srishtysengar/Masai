@@ -1,0 +1,39 @@
+.form-card { margin-bottom: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field > label { font-size: 13px; color: var(--muted); }
+.field > input,
+.field > select,
+.field > textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: #fff;
+}
+
+textarea { min-height: 100px; resize: vertical; }
+
+.field.checkbox { margin-top: 6px; }
+.checkbox-label { display: inline-flex; align-items: center; gap: 8px; }
+
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.ratings { margin-top: 8px; }
+.ratings h3 { margin: 8px 0 10px; font-size: 16px; }
+
+.actions {
+  display: flex; justify-content: flex-end; margin-top: 8px;
+}
+button.primary {
+  background: var(--primary); color: #fff; border: none;
+  padding: 10px 14px; border-radius: 8px; cursor: pointer; font-weight: 600;
+}
+button.primary:hover { background: var(--primary-600); }
