@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Idly", "price": 50, "category": "Breakfast" },
+  { "id": 2, "name": "Dosa", "price": 60, "category": "Breakfast" },
+  { "id": 3, "name": "Paneer Butter Masala", "price": 180, "category": "Lunch" }
+]
