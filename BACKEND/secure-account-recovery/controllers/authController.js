@@ -53,20 +53,21 @@ exports.forgotPassword = async (req,res)=>{
         const hashedToken = crypto.createHash("sha256").update(resetToken).digest("hex");
 
         user.passwordResetToken=hashedToken;
-        user.passwordResetExpires=Data.now()+10*60*1000;
+        user.passwordResetExpires=Date.now()+10*60*1000;
         await user.save();
 
         const resetUrl = `http://localhost:${process.env.PORT}/api/auth/reset-password/${resetToken}`;
         const message = `You requested a password reset. Click here: ${resetUrl}`;
 
         await sendEmail({
-            email:user.email,
+            to:user.email,
             subject:"Password Reset",
             message,
         });
 
         res.status(201).json({success: true, message: "Reset Link sent to your registered email" });
     } catch (error) {
+        console.log("forgot password error:", error);
         res.status(500).json({success: false, error:error.message });
     }
 };
@@ -80,7 +81,7 @@ exports.resetPassword = async (req,res)=>{
         
         const user = await User.findOne({
             passwordResetToken:hashedToken,
-            passwordResetExpires: {$gt:Data.now()},
+            passwordResetExpires: {$gt:Date.now()},
         });
 
         if(!user) return res.status(400).json({success:false, error:"Token invalid or expired"});

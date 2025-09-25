@@ -7,14 +7,14 @@ const sendEmail = async (options)=>{
         host:process.env.EMAIL_HOST,
         port:process.env.EMAIL_PORT,
         auth:{
-            user:testAccount.user,
-            pass:testAccount.pass,
+            user:process.env.EMAIL_USER,
+            pass:process.env.EMAIL_PASS,
         },
     });
 
     const mailOptions = {
         from: '"Secure Recovery API" <no-reply@secureapi.com>',
-        to: options.email,
+        to: options.to,
         subject:options.subject,
         text:options.message,
     };
