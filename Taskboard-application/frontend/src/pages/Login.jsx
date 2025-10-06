@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import  {useState} from "react";
 import { AuthContext } from "../context/AuthContext";
-import {useNavigate} from "react-router-dom"
+import {useNavigate, Link} from "react-router-dom"
 import { useContext } from "react";
 
 export default function Login () {
@@ -38,6 +38,13 @@ export default function Login () {
              required
             /><br/>
             <button type="submit">Login</button>
+
+            <p style={{ marginTop: "15px" }}>
+            Don’t have an account?{" "}
+             <Link to="/register" style={{ color: "blue" }}>
+               Register here
+             </Link>
+            </p>
 
         </form>
     )
